@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BrokenSec</title>
+
+    <link rel="icon" type="image/png" href="https://i.hizliresim.com/3c83z84.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#000;
+            font-family:'Orbitron',sans-serif;
+            color:white;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            overflow:hidden;
+            position:relative;
+        }
+
+        body::before{
+            content:"";
+            position:absolute;
+            width:600px;
+            height:600px;
+            background:red;
+            border-radius:50%;
+            filter:blur(180px);
+            opacity:0.15;
+            z-index:-2;
+            animation:pulse 5s infinite ease-in-out;
+        }
+
+        body::after{
+            content:"";
+            position:absolute;
+            inset:0;
+            background-image:
+            linear-gradient(rgba(255,0,0,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,0,0,0.03) 1px, transparent 1px);
+            background-size:60px 60px;
+            z-index:-1;
+        }
+
+        @keyframes pulse{
+            0%{ transform:scale(1); }
+            50%{ transform:scale(1.1); }
+            100%{ transform:scale(1); }
+        }
+
+        .container{
+            width:100%;
+            max-width:900px;
+            padding:15px;
+            animation:fadeIn 1.2s ease;
+        }
+
+        @keyframes fadeIn{
+            from{ opacity:0; transform:translateY(30px); }
+            to{ opacity:1; transform:translateY(0); }
+        }
+
+        /* LOGO (BÜYÜTÜLDÜ) */
+        .logo{
+            width:280px;
+            max-width:90%;
+            margin-bottom:12px;
+            filter:
+            drop-shadow(0 0 15px rgba(255,0,0,0.8))
+            drop-shadow(0 0 35px rgba(255,0,0,0.5));
+            animation:float 4s ease-in-out infinite;
+        }
+
+        @keyframes float{
+            0%{ transform:translateY(0); }
+            50%{ transform:translateY(-8px); }
+            100%{ transform:translateY(0); }
+        }
+
+        h1{
+            font-size:52px;
+            font-weight:900;
+            letter-spacing:5px;
+            margin-bottom:10px;
+            text-transform:uppercase;
+            text-shadow:0 0 10px red, 0 0 25px red;
+        }
+
+        .slogan{
+            font-size:18px;
+            color:#ff2b2b;
+            margin-bottom:20px;
+            letter-spacing:1px;
+            text-shadow:0 0 10px rgba(255,0,0,0.7);
+        }
+
+        .line{
+            width:250px;
+            height:2px;
+            margin:20px auto;
+            background:linear-gradient(to right, transparent, red, transparent);
+            box-shadow:0 0 10px red;
+        }
+
+        .telegram-btn{
+            width:70px;
+            height:70px;
+            border-radius:50%;
+            background:#229ED9;
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+            color:white;
+            text-decoration:none;
+            font-size:32px;
+            transition:0.3s ease;
+            box-shadow:0 0 20px rgba(34,158,217,0.8);
+        }
+
+        .telegram-btn:hover{
+            transform:scale(1.1);
+            box-shadow:0 0 35px rgba(34,158,217,1);
+        }
+
+        .members{
+            margin-top:18px;
+            font-size:14px;
+            color:#cfcfcf;
+            line-height:1.8;
+            word-break:break-word;
+            padding:0 10px;
+        }
+
+        @media(max-width:768px){
+
+            .logo{
+                width:230px;
+            }
+
+            h1{
+                font-size:34px;
+                letter-spacing:3px;
+            }
+
+            .slogan{
+                font-size:14px;
+            }
+
+            .telegram-btn{
+                width:60px;
+                height:60px;
+                font-size:26px;
+            }
+
+            .members{
+                font-size:11px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="https://i.hizliresim.com/3c83z84.png" alt="BrokenSec" class="logo">
+
+        <h1>BrokenSec</h1>
+
+        <div class="slogan">
+            No System Is Safe While We Exist.
+        </div>
+
+        <div class="line"></div>
+
+        <a href="https://t.me/brokensec" target="_blank" class="telegram-btn">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+
+        <div class="line"></div>
+
+        <div class="members">
+            n0xyr - Wostarex - VSCF ROOTGHOST - Calse - MrRedFace - H3xalock - exp0nent1al - RootXSec - Aytlogo_Luxer
+        </div>
+
+    </div>
+
+</body>
+</html>
